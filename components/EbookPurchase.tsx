@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Book, Brain, Lock, Sparkles } from "lucide-react";
 import { useRef } from "react";
-import im1 from "@/public/baby.png";
+import im1 from "@/public/ebook.png";
 import Image from "next/image";
 export function EbookPurchase() {
   const ref = useRef(null);
@@ -16,7 +16,7 @@ export function EbookPurchase() {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   return (
-    <section ref={ref} className="py-32 relative">
+    <section ref={ref} className="py-18 pb-28 relative">
       <motion.div
         style={{ scale, opacity }}
         className="max-w-7xl mx-auto px-6"
@@ -41,9 +41,9 @@ export function EbookPurchase() {
                 }}
               />
               <div className="relative z-10 h-full flex flex-col items-center justify-center p-8">
-                <Book className="w-16 h-16 mb-6" />
-                <Image src={im1} alt="baby" width={200} height={200}/>
-                <h3 className="text-2xl font-bold text-center mb-4">
+                {/* <Book className="w-16 h-16 mb-6" /> */}
+                <Image src={im1} alt="baby" width={400} height={200} className="mt-10" />
+                <h3 className="text-2xl font-bold text-center mb-4 mt-4">
                   Η τέχνη της χειραγώγησης
                 </h3>
                 <div className="flex gap-4 mb-6">
@@ -104,10 +104,10 @@ export function EbookPurchase() {
               className="space-y-4"
             >
               <div className="flex items-baseline gap-2">
-                <span className="text-4xl font-bold">29.99€</span>
+                <span className="text-4xl font-bold">20.00€</span>
                 <span className="text-white/60">εφάπαξ</span>
               </div>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

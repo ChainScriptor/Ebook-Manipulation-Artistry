@@ -41,7 +41,7 @@ const advancedStages = [
 
 export function ManipulationStages() {
   return (
-    <div className="w-full max-w-7xl mx-auto p-6 space-y-12 border-b-2">
+    <div className="w-full max-w-7xl mx-auto p-6 space-y-12 border-b-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {stages.map((stage, index) => (
           <motion.div
